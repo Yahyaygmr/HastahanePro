@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,21 @@ namespace HastahanePro
         public FrmHastaKayit()
         {
             InitializeComponent();
+        }
+        sqlBaglantisi bagl = new sqlBaglantisi();
+        private void BtnKayıtYap_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Insert into Tbl_Hastalar (HastaAd,HastaSoyad,HastaTc,HastaTelefon,HastaSifre,HastaCinsiyet) values (@p1,@p2,@p3,@p4,@p5,@p6)", bagl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
+            komut.Parameters.AddWithValue("@p3", MskHastaTc.Text);
+            komut.Parameters.AddWithValue("@p4", MskTelefon.Text);
+            komut.Parameters.AddWithValue("@p5", TxtSifre.Text);
+            komut.Parameters.AddWithValue("@p6", CmbCinsiyet.Text);
+            komut.ExecuteNonQuery();
+            bagl.baglanti().Close();
+            MessageBox.Show("Kaydınız Gerçekleşmiştir. Şifreniz : " + TxtSifre.Text, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

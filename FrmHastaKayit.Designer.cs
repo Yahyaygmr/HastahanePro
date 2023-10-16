@@ -31,7 +31,7 @@
             this.MskHastaTc = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtAd = new System.Windows.Forms.TextBox();
-            this.BtnGirisYap = new System.Windows.Forms.Button();
+            this.BtnKayıtYap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,18 +65,18 @@
             // 
             this.TxtAd.Location = new System.Drawing.Point(173, 169);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.PasswordChar = '*';
             this.TxtAd.Size = new System.Drawing.Size(268, 34);
             this.TxtAd.TabIndex = 2;
             // 
-            // BtnGirisYap
+            // BtnKayıtYap
             // 
-            this.BtnGirisYap.Location = new System.Drawing.Point(66, 498);
-            this.BtnGirisYap.Name = "BtnGirisYap";
-            this.BtnGirisYap.Size = new System.Drawing.Size(375, 40);
-            this.BtnGirisYap.TabIndex = 8;
-            this.BtnGirisYap.Text = "Kaydet";
-            this.BtnGirisYap.UseVisualStyleBackColor = true;
+            this.BtnKayıtYap.Location = new System.Drawing.Point(66, 498);
+            this.BtnKayıtYap.Name = "BtnKayıtYap";
+            this.BtnKayıtYap.Size = new System.Drawing.Size(375, 40);
+            this.BtnKayıtYap.TabIndex = 8;
+            this.BtnKayıtYap.Text = "Kaydet";
+            this.BtnKayıtYap.UseVisualStyleBackColor = true;
+            this.BtnKayıtYap.Click += new System.EventHandler(this.BtnKayıtYap_Click);
             // 
             // label2
             // 
@@ -110,7 +110,6 @@
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(173, 228);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.PasswordChar = '*';
             this.TxtSoyad.Size = new System.Drawing.Size(268, 34);
             this.TxtSoyad.TabIndex = 3;
             // 
@@ -171,8 +170,10 @@
             // 
             // FrmHastaKayit
             // 
+            this.AcceptButton = this.BtnKayıtYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(496, 568);
             this.Controls.Add(this.CmbCinsiyet);
@@ -186,13 +187,14 @@
             this.Controls.Add(this.MskHastaTc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtAd);
-            this.Controls.Add(this.BtnGirisYap);
+            this.Controls.Add(this.BtnKayıtYap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaKayit";
-            this.Text = "FrmHastaKayit";
+            this.Text = "Hasta Kayıt";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +205,7 @@
         private System.Windows.Forms.MaskedTextBox MskHastaTc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtAd;
-        private System.Windows.Forms.Button BtnGirisYap;
+        private System.Windows.Forms.Button BtnKayıtYap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

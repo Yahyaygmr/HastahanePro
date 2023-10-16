@@ -95,7 +95,6 @@
             // 
             this.TxtSifre.Location = new System.Drawing.Point(193, 385);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.PasswordChar = '*';
             this.TxtSifre.Size = new System.Drawing.Size(268, 34);
             this.TxtSifre.TabIndex = 27;
             // 
@@ -112,7 +111,6 @@
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(193, 264);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.PasswordChar = '*';
             this.TxtSoyad.Size = new System.Drawing.Size(268, 34);
             this.TxtSoyad.TabIndex = 25;
             // 
@@ -137,7 +135,6 @@
             // 
             this.TxtAd.Location = new System.Drawing.Point(193, 205);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.PasswordChar = '*';
             this.TxtAd.Size = new System.Drawing.Size(268, 34);
             this.TxtAd.TabIndex = 24;
             // 
@@ -149,6 +146,7 @@
             this.BtnGuncelle.TabIndex = 29;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // label2
             // 
@@ -173,6 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(534, 619);
             this.Controls.Add(this.CmbCinsiyet);
             this.Controls.Add(this.label7);
@@ -189,9 +188,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmBilgiDuzenle";
-            this.Text = "FrmBilgiDuzenle";
+            this.Text = "Hasta Bilgi Düzenle";
+            this.Load += new System.EventHandler(this.FrmBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
