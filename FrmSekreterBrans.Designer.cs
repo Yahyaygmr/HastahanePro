@@ -45,6 +45,7 @@
             // 
             this.TxtBransrId.Location = new System.Drawing.Point(142, 72);
             this.TxtBransrId.Name = "TxtBransrId";
+            this.TxtBransrId.ReadOnly = true;
             this.TxtBransrId.Size = new System.Drawing.Size(236, 34);
             this.TxtBransrId.TabIndex = 29;
             // 
@@ -56,6 +57,7 @@
             this.BtnGuncelle.TabIndex = 28;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnKaydet
             // 
@@ -65,6 +67,7 @@
             this.BtnKaydet.TabIndex = 27;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // groupBox1
             // 
@@ -78,6 +81,7 @@
             // 
             // DgwBransListesi
             // 
+            this.DgwBransListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgwBransListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwBransListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgwBransListesi.Location = new System.Drawing.Point(3, 30);
@@ -86,6 +90,7 @@
             this.DgwBransListesi.RowTemplate.Height = 24;
             this.DgwBransListesi.Size = new System.Drawing.Size(370, 285);
             this.DgwBransListesi.TabIndex = 0;
+            this.DgwBransListesi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwBransListesi_CellClick);
             // 
             // BtnSil
             // 
@@ -95,6 +100,7 @@
             this.BtnSil.TabIndex = 25;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // label2
             // 
@@ -135,9 +141,10 @@
             this.Controls.Add(this.TxtBransAd);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmSekreterBrans";
             this.Text = "FrmSekreterBrans";
+            this.Load += new System.EventHandler(this.FrmSekreterBrans_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgwBransListesi)).EndInit();
             this.ResumeLayout(false);

@@ -42,7 +42,7 @@
             this.MskSekreterTc.Mask = "00000000000";
             this.MskSekreterTc.Name = "MskSekreterTc";
             this.MskSekreterTc.Size = new System.Drawing.Size(268, 34);
-            this.MskSekreterTc.TabIndex = 20;
+            this.MskSekreterTc.TabIndex = 1;
             // 
             // label3
             // 
@@ -59,16 +59,17 @@
             this.TxtSekreterSifre.Name = "TxtSekreterSifre";
             this.TxtSekreterSifre.PasswordChar = '*';
             this.TxtSekreterSifre.Size = new System.Drawing.Size(268, 34);
-            this.TxtSekreterSifre.TabIndex = 18;
+            this.TxtSekreterSifre.TabIndex = 2;
             // 
             // BtnGirisYap
             // 
             this.BtnGirisYap.Location = new System.Drawing.Point(257, 296);
             this.BtnGirisYap.Name = "BtnGirisYap";
             this.BtnGirisYap.Size = new System.Drawing.Size(186, 40);
-            this.BtnGirisYap.TabIndex = 17;
+            this.BtnGirisYap.TabIndex = 3;
             this.BtnGirisYap.Text = "Giriş Yap";
             this.BtnGirisYap.UseVisualStyleBackColor = true;
+            this.BtnGirisYap.Click += new System.EventHandler(this.BtnGirisYap_Click);
             // 
             // label2
             // 
@@ -93,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(460, 364);
             this.Controls.Add(this.MskSekreterTc);
             this.Controls.Add(this.label3);
@@ -101,9 +103,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmSekreterGiris";
-            this.Text = "FrmSekreterGiris";
+            this.Text = "Sekreter Giriş";
             this.ResumeLayout(false);
             this.PerformLayout();
 

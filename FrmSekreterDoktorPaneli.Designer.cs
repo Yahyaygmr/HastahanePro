@@ -138,6 +138,7 @@
             this.BtnSil.TabIndex = 10;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // groupBox1
             // 
@@ -151,6 +152,7 @@
             // 
             // DgwDoktorListesi
             // 
+            this.DgwDoktorListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgwDoktorListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwDoktorListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgwDoktorListesi.Location = new System.Drawing.Point(3, 30);
@@ -159,6 +161,7 @@
             this.DgwDoktorListesi.RowTemplate.Height = 24;
             this.DgwDoktorListesi.Size = new System.Drawing.Size(589, 338);
             this.DgwDoktorListesi.TabIndex = 0;
+            this.DgwDoktorListesi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwDoktorListesi_CellClick);
             // 
             // BtnKaydet
             // 
@@ -168,6 +171,7 @@
             this.BtnKaydet.TabIndex = 12;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // BtnGuncelle
             // 
@@ -177,13 +181,16 @@
             this.BtnGuncelle.TabIndex = 13;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // TxtDoktorId
             // 
             this.TxtDoktorId.Location = new System.Drawing.Point(369, 30);
             this.TxtDoktorId.Name = "TxtDoktorId";
+            this.TxtDoktorId.ReadOnly = true;
             this.TxtDoktorId.Size = new System.Drawing.Size(54, 34);
             this.TxtDoktorId.TabIndex = 14;
+            this.TxtDoktorId.Visible = false;
             // 
             // FrmSekreterDoktorPaneli
             // 
@@ -206,9 +213,10 @@
             this.Controls.Add(this.CmbBrans);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmSekreterDoktorPaneli";
             this.Text = "FrmSekreterDoktorPaneli";
+            this.Load += new System.EventHandler(this.FrmSekreterDoktorPaneli_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgwDoktorListesi)).EndInit();
             this.ResumeLayout(false);

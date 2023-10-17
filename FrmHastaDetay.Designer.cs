@@ -34,6 +34,8 @@
             this.LblTcNo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TxtRandevuId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.LinkLblBilgiGuncelle = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.CmbDoktor = new System.Windows.Forms.ComboBox();
@@ -46,8 +48,6 @@
             this.DgwRandevGecmis = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.DgwRandevuAktif = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtRandevuId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -123,6 +123,22 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
+            // 
+            // TxtRandevuId
+            // 
+            this.TxtRandevuId.Location = new System.Drawing.Point(143, 41);
+            this.TxtRandevuId.Name = "TxtRandevuId";
+            this.TxtRandevuId.Size = new System.Drawing.Size(242, 34);
+            this.TxtRandevuId.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(87, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 29);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Id :";
             // 
             // LinkLblBilgiGuncelle
             // 
@@ -211,6 +227,7 @@
             // 
             // DgwRandevGecmis
             // 
+            this.DgwRandevGecmis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgwRandevGecmis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwRandevGecmis.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgwRandevGecmis.Location = new System.Drawing.Point(3, 30);
@@ -232,6 +249,7 @@
             // 
             // DgwRandevuAktif
             // 
+            this.DgwRandevuAktif.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgwRandevuAktif.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgwRandevuAktif.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgwRandevuAktif.Location = new System.Drawing.Point(3, 30);
@@ -240,22 +258,6 @@
             this.DgwRandevuAktif.RowTemplate.Height = 24;
             this.DgwRandevuAktif.Size = new System.Drawing.Size(877, 280);
             this.DgwRandevuAktif.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 29);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Id :";
-            // 
-            // TxtRandevuId
-            // 
-            this.TxtRandevuId.Location = new System.Drawing.Point(143, 41);
-            this.TxtRandevuId.Name = "TxtRandevuId";
-            this.TxtRandevuId.Size = new System.Drawing.Size(242, 34);
-            this.TxtRandevuId.TabIndex = 9;
             // 
             // FrmHastaDetay
             // 
