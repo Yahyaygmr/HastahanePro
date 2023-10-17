@@ -73,7 +73,6 @@
             // 
             this.TxtSifre.Location = new System.Drawing.Point(181, 357);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.PasswordChar = '*';
             this.TxtSifre.Size = new System.Drawing.Size(268, 34);
             this.TxtSifre.TabIndex = 41;
             // 
@@ -90,7 +89,6 @@
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(181, 236);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.PasswordChar = '*';
             this.TxtSoyad.Size = new System.Drawing.Size(268, 34);
             this.TxtSoyad.TabIndex = 39;
             // 
@@ -115,7 +113,6 @@
             // 
             this.TxtAd.Location = new System.Drawing.Point(181, 177);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.PasswordChar = '*';
             this.TxtAd.Size = new System.Drawing.Size(268, 34);
             this.TxtAd.TabIndex = 38;
             // 
@@ -127,6 +124,7 @@
             this.BtnGuncelle.TabIndex = 43;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // label2
             // 
@@ -168,6 +166,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDoktorBilgiDuzenle";
             this.Text = "FrmDoktorBilgiDuzenle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

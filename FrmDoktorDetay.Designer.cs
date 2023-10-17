@@ -34,13 +34,13 @@
             this.LblTcNo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RTxtSikayet = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DgwRandevuListesi = new System.Windows.Forms.DataGridView();
-            this.RTxtSikayet = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.BtnBilgiDuzenle = new System.Windows.Forms.Button();
-            this.BtnDuyurular = new System.Windows.Forms.Button();
             this.BtnCikis = new System.Windows.Forms.Button();
+            this.BtnDuyurular = new System.Windows.Forms.Button();
+            this.BtnBilgiDuzenle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -107,6 +107,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Detay";
             // 
+            // RTxtSikayet
+            // 
+            this.RTxtSikayet.Location = new System.Drawing.Point(0, 33);
+            this.RTxtSikayet.Name = "RTxtSikayet";
+            this.RTxtSikayet.Size = new System.Drawing.Size(405, 189);
+            this.RTxtSikayet.TabIndex = 0;
+            this.RTxtSikayet.Text = "";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.DgwRandevuListesi);
@@ -127,14 +135,7 @@
             this.DgwRandevuListesi.RowTemplate.Height = 24;
             this.DgwRandevuListesi.Size = new System.Drawing.Size(876, 576);
             this.DgwRandevuListesi.TabIndex = 0;
-            // 
-            // RTxtSikayet
-            // 
-            this.RTxtSikayet.Location = new System.Drawing.Point(0, 33);
-            this.RTxtSikayet.Name = "RTxtSikayet";
-            this.RTxtSikayet.Size = new System.Drawing.Size(405, 189);
-            this.RTxtSikayet.TabIndex = 0;
-            this.RTxtSikayet.Text = "";
+            this.DgwRandevuListesi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwRandevuListesi_CellClick);
             // 
             // groupBox4
             // 
@@ -148,14 +149,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Randevu Detay";
             // 
-            // BtnBilgiDuzenle
+            // BtnCikis
             // 
-            this.BtnBilgiDuzenle.Location = new System.Drawing.Point(15, 51);
-            this.BtnBilgiDuzenle.Name = "BtnBilgiDuzenle";
-            this.BtnBilgiDuzenle.Size = new System.Drawing.Size(188, 51);
-            this.BtnBilgiDuzenle.TabIndex = 0;
-            this.BtnBilgiDuzenle.Text = "Bilgi Düzenle";
-            this.BtnBilgiDuzenle.UseVisualStyleBackColor = true;
+            this.BtnCikis.Location = new System.Drawing.Point(15, 128);
+            this.BtnCikis.Name = "BtnCikis";
+            this.BtnCikis.Size = new System.Drawing.Size(390, 55);
+            this.BtnCikis.TabIndex = 2;
+            this.BtnCikis.Text = "Çıkış";
+            this.BtnCikis.UseVisualStyleBackColor = true;
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
             // 
             // BtnDuyurular
             // 
@@ -165,15 +167,17 @@
             this.BtnDuyurular.TabIndex = 1;
             this.BtnDuyurular.Text = "Duyurular";
             this.BtnDuyurular.UseVisualStyleBackColor = true;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
-            // BtnCikis
+            // BtnBilgiDuzenle
             // 
-            this.BtnCikis.Location = new System.Drawing.Point(15, 128);
-            this.BtnCikis.Name = "BtnCikis";
-            this.BtnCikis.Size = new System.Drawing.Size(390, 55);
-            this.BtnCikis.TabIndex = 2;
-            this.BtnCikis.Text = "Çıkış";
-            this.BtnCikis.UseVisualStyleBackColor = true;
+            this.BtnBilgiDuzenle.Location = new System.Drawing.Point(15, 51);
+            this.BtnBilgiDuzenle.Name = "BtnBilgiDuzenle";
+            this.BtnBilgiDuzenle.Size = new System.Drawing.Size(188, 51);
+            this.BtnBilgiDuzenle.TabIndex = 0;
+            this.BtnBilgiDuzenle.Text = "Bilgi Düzenle";
+            this.BtnBilgiDuzenle.UseVisualStyleBackColor = true;
+            this.BtnBilgiDuzenle.Click += new System.EventHandler(this.BtnBilgiDuzenle_Click);
             // 
             // FrmDoktorDetay
             // 
@@ -185,9 +189,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDoktorDetay";
             this.Text = "FrmDoktorDetay";
+            this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

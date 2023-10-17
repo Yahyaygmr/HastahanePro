@@ -126,6 +126,7 @@
             // 
             // TxtRandevuId
             // 
+            this.TxtRandevuId.Enabled = false;
             this.TxtRandevuId.Location = new System.Drawing.Point(143, 41);
             this.TxtRandevuId.Name = "TxtRandevuId";
             this.TxtRandevuId.Size = new System.Drawing.Size(242, 34);
@@ -187,6 +188,7 @@
             this.BtnRandevuAl.TabIndex = 3;
             this.BtnRandevuAl.Text = "Randevu Al";
             this.BtnRandevuAl.UseVisualStyleBackColor = true;
+            this.BtnRandevuAl.Click += new System.EventHandler(this.BtnRandevuAl_Click);
             // 
             // RTxtSikayet
             // 
@@ -258,6 +260,7 @@
             this.DgwRandevuAktif.RowTemplate.Height = 24;
             this.DgwRandevuAktif.Size = new System.Drawing.Size(877, 280);
             this.DgwRandevuAktif.TabIndex = 0;
+            this.DgwRandevuAktif.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwRandevuAktif_CellClick);
             // 
             // FrmHastaDetay
             // 

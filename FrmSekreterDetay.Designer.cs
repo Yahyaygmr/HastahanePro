@@ -60,6 +60,7 @@
             this.BtnBransPaneli = new System.Windows.Forms.Button();
             this.BtnRandevuListe = new System.Windows.Forms.Button();
             this.BtnDoktorPaneli = new System.Windows.Forms.Button();
+            this.BtnDuyurular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -353,6 +354,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.BtnDuyurular);
             this.groupBox6.Controls.Add(this.BtnBransPaneli);
             this.groupBox6.Controls.Add(this.BtnRandevuListe);
             this.groupBox6.Controls.Add(this.BtnDoktorPaneli);
@@ -365,9 +367,9 @@
             // 
             // BtnBransPaneli
             // 
-            this.BtnBransPaneli.Location = new System.Drawing.Point(280, 58);
+            this.BtnBransPaneli.Location = new System.Drawing.Point(212, 62);
             this.BtnBransPaneli.Name = "BtnBransPaneli";
-            this.BtnBransPaneli.Size = new System.Drawing.Size(228, 52);
+            this.BtnBransPaneli.Size = new System.Drawing.Size(178, 52);
             this.BtnBransPaneli.TabIndex = 28;
             this.BtnBransPaneli.Text = "Branş Paneli";
             this.BtnBransPaneli.UseVisualStyleBackColor = true;
@@ -375,22 +377,33 @@
             // 
             // BtnRandevuListe
             // 
-            this.BtnRandevuListe.Location = new System.Drawing.Point(554, 58);
+            this.BtnRandevuListe.Location = new System.Drawing.Point(417, 62);
             this.BtnRandevuListe.Name = "BtnRandevuListe";
-            this.BtnRandevuListe.Size = new System.Drawing.Size(228, 52);
+            this.BtnRandevuListe.Size = new System.Drawing.Size(178, 52);
             this.BtnRandevuListe.TabIndex = 27;
             this.BtnRandevuListe.Text = "Randevu Liste";
             this.BtnRandevuListe.UseVisualStyleBackColor = true;
+            this.BtnRandevuListe.Click += new System.EventHandler(this.BtnRandevuListe_Click);
             // 
             // BtnDoktorPaneli
             // 
-            this.BtnDoktorPaneli.Location = new System.Drawing.Point(18, 58);
+            this.BtnDoktorPaneli.Location = new System.Drawing.Point(10, 62);
             this.BtnDoktorPaneli.Name = "BtnDoktorPaneli";
-            this.BtnDoktorPaneli.Size = new System.Drawing.Size(228, 52);
+            this.BtnDoktorPaneli.Size = new System.Drawing.Size(178, 52);
             this.BtnDoktorPaneli.TabIndex = 26;
             this.BtnDoktorPaneli.Text = "Doktor Paneli";
             this.BtnDoktorPaneli.UseVisualStyleBackColor = true;
             this.BtnDoktorPaneli.Click += new System.EventHandler(this.BtnDoktorPaneli_Click);
+            // 
+            // BtnDuyurular
+            // 
+            this.BtnDuyurular.Location = new System.Drawing.Point(621, 62);
+            this.BtnDuyurular.Name = "BtnDuyurular";
+            this.BtnDuyurular.Size = new System.Drawing.Size(178, 52);
+            this.BtnDuyurular.TabIndex = 29;
+            this.BtnDuyurular.Text = "Duyurular";
+            this.BtnDuyurular.UseVisualStyleBackColor = true;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
             // FrmSekreterDetay
             // 
@@ -456,5 +469,6 @@
         private System.Windows.Forms.Button BtnBransPaneli;
         private System.Windows.Forms.Button BtnRandevuListe;
         private System.Windows.Forms.Button BtnDoktorPaneli;
+        private System.Windows.Forms.Button BtnDuyurular;
     }
 }

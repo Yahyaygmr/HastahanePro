@@ -102,5 +102,17 @@ namespace HastahanePro
             FrmSekreterBrans fr = new FrmSekreterBrans();
             fr.Show();
         }
+
+        private void BtnRandevuListe_Click(object sender, EventArgs e)
+        {
+            FrmRandevuListesi fr = new FrmRandevuListesi();
+            fr.Show();
+        }
+
+        private void BtnDuyurular_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular fr = new FrmDuyurular();
+            fr.Show();
+        }
     }
 }

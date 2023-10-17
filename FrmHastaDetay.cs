@@ -68,7 +68,7 @@ namespace HastahanePro
         private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans='" + CmbBrans.Text + "'", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans='" + CmbBrans.Text + "' and RandevuDoktor='" + CmbDoktor.Text +"' and RandevuDurum=0", bgl.baglanti());
             da.Fill(dt);
             DgwRandevuAktif.DataSource = dt;
         }
@@ -78,6 +78,24 @@ namespace HastahanePro
             FrmBilgiDuzenle fr = new FrmBilgiDuzenle();
             fr.TcNo = tc;
             fr.Show();
+        }
+
+        private void DgwRandevuAktif_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = DgwRandevuAktif.SelectedCells[0].RowIndex;
+            TxtRandevuId.Text = DgwRandevuAktif.Rows[secilen].Cells[0].Value.ToString();
+        }
+
+        private void BtnRandevuAl_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Update Tbl_Randevular Set RandevuDurum=1,HastaTc=@p1,HastaSikayet=@p2 where RandevuId=@p3",bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", LblTcNo.Text);
+            komut.Parameters.AddWithValue("@p2", RTxtSikayet.Text);
+            komut.Parameters.AddWithValue("@p3", TxtRandevuId.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Randevu Oluşturuldu");
+
         }
     }
 }
